@@ -3,7 +3,10 @@ ADBloat ("a debloat") is simple PowerShell wrapper around Android Debug Bridge, 
 Once the bloatware apps are uninstalled, it may help you saving your battery life or protecting your data from them.
 
 ## Features
-- List installed packages- Install package (revert uninstall)- Uninstall package
+- List installed packages
+- Install package (revert uninstall)
+- Uninstall package
+
 Planned: option to remove apps in bulk, pre-defined lists of bloatware apps for different phone vendors, DeGoogle list. 
 
 ## Usage (steps)
