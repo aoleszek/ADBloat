@@ -43,15 +43,13 @@ if ($OutDevices.count -ne 3) {
 
 Write-Host "OK" -foreground Green
 
-if ($OutDevices -like "*unauthorized*") {
-    while ($OutDevices -like "*unauthorized*") {
-        Write-Host "Please authorize this computer on your phone." -foreground Yellow
-        $Confirmation = Read-Host "Type [r] to retry or anything else to exit"
+while ($OutDevices -like "*unauthorized*") {
+    Write-Host "Please authorize this computer on your phone." -foreground Yellow
+    $Confirmation = Read-Host "Type [r] to retry or anything else to exit"
 
-        if ($Confirmation.ToLower() -ne "r") { exit }
+    if ($Confirmation.ToLower() -ne "r") { exit }
     
-        $OutDevices = (& $AdbExecutable devices 2>&1)
-    }
+    $OutDevices = (& $AdbExecutable devices 2>&1)
 }
 
 function Option-ListPackages {
